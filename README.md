@@ -1,6 +1,6 @@
 ## TwitchIRC for Godot
 
-This is a lightweight, single-script addon for Godot 3 and 4 that can connect to a Twitch channel's IRC chatroom. It reads, parses, and formats incoming chat messages into a human-readable Dictionary for use in your Godot projects.
+This is a lightweight, single-script addon for Godot 3.2+ that can connect to a Twitch channel's IRC chatroom. It reads, parses, and formats incoming chat messages into a human-readable Dictionary for use in your Godot projects.
 
 ### Features
 - Anonymous login that requires no credentials or tokens *(Read Only)*
