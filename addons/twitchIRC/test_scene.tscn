@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/twitchIRC/twitchtest.gd" type="Script" id=1]
+
+[node name="TTV_IRC" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="message" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_top = -18.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 500, 20 )
+rect_scale = Vector2( 2, 2 )
+bbcode_enabled = true
+bbcode_text = "[center] Example: Ipsum Text [/center]"
+text = " Example: Ipsum Text "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="post" type="LineEdit" parent="."]
+margin_left = 10.0
+margin_top = 336.0
+margin_right = 510.0
+margin_bottom = 360.0
+rect_scale = Vector2( 2, 2 )
+placeholder_text = "enter message and press enter (oauth login only)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_entered" from="post" to="." method="_on_post_text_entered"]
