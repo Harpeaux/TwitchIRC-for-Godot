@@ -6,7 +6,7 @@ This is a lightweight, single-script addon for Godot 3.2+ that can connect to a 
 - Anonymous login that requires no credentials or tokens *(Read Only)*
 - Oauth token login that allows posting to the chat via Godot
 - Chat messages are broadcast in a readable `Dictionary` via the `chat_message` signal
-- The Dictionary over a dozen details on the user, including things like bits, cheers, highlighted messages, announcements, sub gifts, and *many* more.
+- The Dictionary has over a dozen details on the user, including things like bits, cheers, highlighted messages, announcements, sub gifts, and *many* more.
 
 ### Installation and Usage
 Add TwitchIRC to your Godot project's addons folder, assign `TwitchIRC.gd` to a basic Node, set the channel and login details and then add the script to the scene tree.
