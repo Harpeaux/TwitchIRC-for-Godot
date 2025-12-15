@@ -51,7 +51,7 @@ func _ready()->void:
 func _process(_delta:float)->void:
 	# detect lost connection
 	if connected and tcp.get_status() != StreamPeerTCP.STATUS_CONNECTED:
-		if dbp: print("[TwitchIRC] Lost connection to Twitch IRC.")
+		if dbp:print("[TwitchIRC] Lost connection to Twitch IRC.")
 		reconnect()
 		return
 	
@@ -60,7 +60,7 @@ func _process(_delta:float)->void:
 		if tcp.get_status() == StreamPeerTCP.STATUS_CONNECTED:
 			connected = true
 			reconnect_attempts = 0  # reset attempts on success
-			if dbp: print("[TwitchIRC] Connected to Twitch IRC, logging in...")
+			if dbp:print("[TwitchIRC] Connected to Twitch IRC, logging in...")
 			_login()
 		return
 	
@@ -105,7 +105,7 @@ func reconnect()->void:
 		return
 	
 	reconnect_attempts += 1
-	if dbp: print("[TwitchIRC] Attempting reconnect (%d/%d)..." % [reconnect_attempts, max_reconnect_attempts])
+	if dbp:print("[TwitchIRC] Attempting reconnect (%d/%d)..." % [reconnect_attempts, max_reconnect_attempts])
 	
 	_logout()  # clear state
 	
@@ -116,7 +116,7 @@ func reconnect()->void:
 		yield(get_tree().create_timer(5.0), "timeout")
 		reconnect()
 	else:
-		if dbp: print("[TwitchIRC] Reconnect initiated, waiting for connection...")
+		if dbp:print("[TwitchIRC] Reconnect initiated, waiting for connection...")
 
 # send commands
 func _send(cmd:String)->void:
