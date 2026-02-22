@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://i7pbc10b5ncx"]
+
+[ext_resource type="Script" uid="uid://cibomqvhxjvom" path="res://addons/twitchIRC/test_scene.gd" id="1_v60cg"]
+
+[node name="TTV_IRC" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_v60cg")
+
+[node name="message" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(500, 24)
+layout_mode = 0
+offset_left = 460.0
+offset_top = 520.0
+offset_right = 960.0
+offset_bottom = 544.0
+scale = Vector2(2, 2)
+bbcode_enabled = true
+text = "[center] Example: Ipsum Text [/center]"
+
+[node name="post" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 593.0
+offset_right = 960.0
+offset_bottom = 624.0
+scale = Vector2(2, 2)
+
+[connection signal="text_submitted" from="post" to="." method="_on_post_text_submitted"]
